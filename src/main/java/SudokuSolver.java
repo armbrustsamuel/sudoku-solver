@@ -40,9 +40,11 @@ public class SudokuSolver {
         if (row == 11 && col == 11) {
             return true;
         }
+
 //        Enable this code to visualize the step by step
 //        System.out.println("Printing partial solution:");
 //        gameHelper.printArray(values);
+//        System.out.println("Next will be row: " + row + " and col:" + col);
 
         for (int i = 1; i <= 9; i++) {
 

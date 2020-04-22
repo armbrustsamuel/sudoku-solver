@@ -34,11 +34,12 @@ public class SudokuSolverHeuristics {
             return false;
         }
 
+        HeuristicObject heuristicObject = gameHeuristics.getNextSelectedValue();
+
 //        Enable this code to visualize the step by step
 //        System.out.println("Printing partial solution:");
 //        gameHelper.printArray(values);
-
-        HeuristicObject heuristicObject = gameHeuristics.getNextSelectedValue();
+//        System.out.println("Next will be row: " + heuristicObject.getRow() + " and col:" + heuristicObject.getCol());
 
         for (int obj: heuristicObject.getPossibleValues()) {
 

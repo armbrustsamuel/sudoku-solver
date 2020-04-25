@@ -63,6 +63,7 @@ public class SudokuSolverTest {
         sudokuSolver.printEnteredArray();
 
         sudokuSolver.solveWithoutHeuristics(testValues);
+        
 
         System.out.println();
         System.out.println("Solution is:");

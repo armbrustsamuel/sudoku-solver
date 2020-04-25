@@ -52,6 +52,8 @@ public class SudokuReadFromFile {
         sudokuMRVSolver.solveWithHeuristics(grid);
         sudokuMRVSolver.printResult();
 
+        System.out.println("Nodes: " + sudokuMRVSolver.getNode_count());
+
     }
 
     @Test
@@ -75,6 +77,8 @@ public class SudokuReadFromFile {
 
         sudokuDeepSolver.solveWithoutHeuristics(grid);
         sudokuDeepSolver.printResult();
+
+        System.out.println("Nodes: " + sudokuDeepSolver.getNode_count());
 
     }
 

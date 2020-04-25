@@ -21,9 +21,16 @@ public class SudokuSolver {
     GameHelper gameHelper;
     GameRules gameRules;
 
+    public int getNode_count() {
+        return node_count;
+    }
+
+    int node_count;
+
     public SudokuSolver() {
         this.gameRules = new GameRules();
         this.gameHelper = new GameHelper();
+        node_count = 0;
     }
 
     public void importValues(int[][] values){
@@ -40,6 +47,8 @@ public class SudokuSolver {
         if (row == 11 && col == 11) {
             return true;
         }
+
+        node_count +=1;
 
 //        Enable this code to visualize the step by step
 //        System.out.println("Printing partial solution:");

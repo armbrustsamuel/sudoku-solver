@@ -9,6 +9,12 @@ public class SudokuSolverHeuristics {
     GameRules gameRules;
     GameHeuristics gameHeuristics;
 
+    public int getNode_count() {
+        return node_count;
+    }
+
+    int node_count;
+
     public SudokuSolverHeuristics() {
         this.gameHelper = new GameHelper();
         this.gameRules = new GameRules();
@@ -33,6 +39,8 @@ public class SudokuSolverHeuristics {
         if (row == 12 && col == 12) {
             return false;
         }
+
+        node_count +=1;
 
         HeuristicObject heuristicObject = gameHeuristics.getNextSelectedValue();
 
